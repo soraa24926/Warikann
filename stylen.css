@@ -1,0 +1,100 @@
+body{
+  background-color: #ccc;
+}
+/* 全体 */
+.container{
+  width: 500px;
+  margin: 25px auto;
+}
+.title-area{
+  margin-bottom: 20px;
+  position: relative;
+}
+.title{
+  font-size: 40px;
+}
+/* 注意書き */
+.caution{
+  font-size: 15px;
+  position: absolute;
+  bottom: 1px;
+  right: 140px;
+}
+/* 今はない税抜き価格からの計算ボックス */
+#tax-area{
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.input-area{
+  /* コードの改行で空白が作られてしまうため修正 */
+  font-size: 0;
+  margin-bottom: 20px;
+}
+#pricenotax,
+#price,
+#people,
+#unit,
+#btn{
+  font-size: 14px;
+  /* 基本はwidth,hightに＋してpaddingやborderが入るがbox-sizingによりwidth,hightの枠内にpaddingやborderを入れ込む */
+  box-sizing: border-box;
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+#pricenotax,
+#unit {
+  width: 140px;
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+#people,
+#price {
+  width: 110px;
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+#btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 110px;
+  background: #3897fd;
+  text-align: center;
+  color: #fff;
+}
+#btn.nobtn{
+  opacity: 0.5;
+}
+/* 結果エリア */
+.result-area{
+  background-color: #f8f8f8;
+  padding: 10px;
+  height: 130px;
+  border-radius: 5px;
+  /* 子要素の配置を親要素から計算するために初期設定のstaticからrelaticeに変更 */
+  position: relative;
+}
+#result{
+  margin: 0;
+}
+#reset{
+  margin: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  /* 親要素のポジションがrelativeのため親要素から計算した位置に配置 */
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#reset.hidden{
+  display: none;
+}
+footer{
+  margin-top: 15px;
+  /* 文字置く左右 */
+  text-align: right;
+  font-size: 15px;
+}

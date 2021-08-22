@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>割り勘ソフト</title>
+    <link rel="stylesheet" href="stylen.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-area">
+        <div class="title"><strong>割り勘ソフト</strong></div>
+        <div class="caution">（半角数字入力）</div>
+      </div>
+      <!-- <div id="tax-area">
+      <input type="text" placeholder="税抜き金額" id="pricenotax">
+      </div> -->
+      <div class="input-area">
+        <input type="number" placeholder="金額" id="price">
+        <input type="number" placeholder="人数" id="people">
+        <select id="unit">
+          <option value="1">1円単位</option>
+          <option value="10">10円単位</option>
+          <!-- selectedで初めの表示に -->
+          <option value="100" selected>100円単位</option>
+          <option value="1000">1000円単位</option>
+          <option value="10000">10000円単位</option>
+        </select>
+        <div id="btn" class="nobtn">計算</div>
+      </div>
+      <div class="result-area">
+        <p id="result">ここに結果を表示します</p>
+        <p id="reset" class="hidden">もう一度計算する？</p>
+      </div>
+      <footer>©︎ asakasora 2021</footer>
+    </div>
+    <script src="mainn.js"></script>
+  </body>   
+</html>
